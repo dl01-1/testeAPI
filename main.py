@@ -16,7 +16,7 @@ app = FastAPI()
 class Mensagem(BaseModel):
     texto: str
 
-@app.post("/chat")
+@app.post("/chat123")
 async def falar_com_ai(dados: Mensagem):
     # 3. Enviando a pergunta para a IA
     response = model.generate_content(dados.texto)
