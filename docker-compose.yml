@@ -9,7 +9,7 @@ services:
       WHATSAPP_HOOK_URL: http://host.docker.internal:8000/api/webhook
       WHATSAPP_HOOK_EVENTS: message.any
       WAHA_BASE_URL: "http://waha:3000"
-      WAHA_API_KEY: "Franbot1@"
+      WAHA_API_KEY: "API_KEY"
       WAHA_DASHBOARD_NO_PASSWORD: "true"
       WHATSAPP_SWAGGER_NO_PASSWORD: "true"
       WHATSAPP_CORS_ALLOWED_ORIGINS: "*"
