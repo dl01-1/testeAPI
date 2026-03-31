@@ -1,0 +1,28 @@
+services:
+  waha:
+    image: devlikeapro/waha:latest
+    container_name: waha
+    restart: always
+    environment:
+      WHATSAPP_DEFAULT_ENGINE: WEBJS
+      # AJUSTE: 'host.docker.internal' permite que o container fale com o seu Zorin OS
+      WHATSAPP_HOOK_URL: http://host.docker.internal:8000/api/webhook
+      WHATSAPP_HOOK_EVENTS: message.any
+      WAHA_BASE_URL: "http://waha:3000"
+      WAHA_API_KEY: "Franbot1@"
+      WAHA_DASHBOARD_NO_PASSWORD: "true"
+      WHATSAPP_SWAGGER_NO_PASSWORD: "true"
+      WHATSAPP_CORS_ALLOWED_ORIGINS: "*"
+    volumes:
+      - waha_sessions:/app/.sessions
+      - waha_media:/app/.media
+    ports:
+      - "3000:3000"
+    # Isso aqui ativa o 'host.docker.internal' no Linux
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+# ESTA É A PARTE QUE ESTAVA FALTANDO:
+volumes:
+  waha_sessions:
+  waha_media:
