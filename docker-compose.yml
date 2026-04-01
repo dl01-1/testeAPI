@@ -21,7 +21,6 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-# ESTA É A PARTE QUE ESTAVA FALTANDO:
 volumes:
   waha_sessions:
   waha_media:
