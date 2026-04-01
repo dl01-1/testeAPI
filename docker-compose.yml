@@ -5,7 +5,6 @@ services:
     restart: always
     environment:
       WHATSAPP_DEFAULT_ENGINE: WEBJS
-      # AJUSTE: 'host.docker.internal' permite que o container fale com o seu Zorin OS
       WHATSAPP_HOOK_URL: http://host.docker.internal:8000/api/webhook
       WHATSAPP_HOOK_EVENTS: message.any
       WAHA_BASE_URL: "http://waha:3000"
