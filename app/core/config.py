@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     groq_api_key: str  # obrigatório: sem default → erro claro se faltar
 
     # --- WAHA ---
-    waha_base_url: str = "http://35.224.255.64:3000"
+    waha_base_url: str = ""
     waha_session: str = "default"
     waha_api_key: str = ""
 
